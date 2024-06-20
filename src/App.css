@@ -1,0 +1,142 @@
+:root {
+  --primay: black;
+  --bg-primay: white;
+
+  --link: #2a0b0b;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+h3 {
+  margin-top: 60px;
+}
+
+p {
+  margin: 20px 0px;
+  max-width: 1000px;
+}
+
+.header {
+  font-size: 3rem;
+}
+
+.body {
+  margin: 20px 0 10px;
+  font-size: 0.9rem;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 35px;
+
+  background: #845ec2;
+  color: white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+
+  background: var(--bg-primay);
+  color: var(--primay);
+}
+
+.App-link {
+  color: #61dafb;
+  color: var(--link);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}
+
+.result {
+  font-size: large;
+}
+.result span {
+  font-weight: bold;
+}
+
+span.red {
+  color: red;
+}
+
+span.top-line {
+  text-decoration: overline;
+}
+span.top-line:not(:has(~ .top-line)) {
+  margin-right: 8px;
+}
+
+span.top-line-double {
+  border-top: 4px double;
+  line-height: 2.3;
+}
+span.top-line-double:not(:has(~ .top-line-double)) {
+  margin-right: 8px;
+}
+
+button.button-action {
+  margin-top: 20px;
+}
+
+button.button-action:disabled,
+button.button-action:disabled:hover {
+  background-color: hsl(0, 0%, 56%);
+}
+
+button.button-action:hover {
+  background-color: #674996;
+}
+
+hr {
+  width: 100%;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+}
+.table,
+.system-example-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 15px;
+  max-width: 400px;
+  align-self: center;
+  text-align: left;
+}
