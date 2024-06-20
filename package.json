@@ -1,6 +1,6 @@
 {
   "name": "roman-numerals-converter-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert numbers into Roman numerals, for the glory of The Great Roman Empire!",
   "author": "Konrad Bąk",
   "homepage": "https://github.com/konrad-bak/Roman-numerals-converter",
