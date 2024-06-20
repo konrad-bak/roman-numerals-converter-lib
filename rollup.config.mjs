@@ -26,8 +26,10 @@ export default {
     json(),
     typescript({
       tsconfig: './tsconfig.json',
-      // Ensure tslib is used and not bundled
       tslib: require.resolve('tslib'),
+      declaration: true,
+      declarationDir: './dist/types',
+      rootDir: './src',
     }),
   ],
 };

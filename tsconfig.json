@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "declarationDir": "./dist/types",
     "emitDeclarationOnly": true,
     "outDir": "dist",
     "target": "ES6",
@@ -17,9 +18,7 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "declarationDir": "./dist/types"
+    "jsx": "react-jsx"
   },
   "exclude": ["node_modules", "dist", "src/utils/tests/**/*"],
   "include": ["src/**/*"],
