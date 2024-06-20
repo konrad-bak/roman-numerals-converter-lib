@@ -18,7 +18,8 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "exclude": ["node_modules", "dist", "src/utils/tests/**/*"],
   "include": ["src/**/*"],
