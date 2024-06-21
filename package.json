@@ -1,6 +1,6 @@
 {
   "name": "roman-numerals-converter-lib",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "Convert numbers into Roman numerals, for the glory of The Great Roman Empire!",
   "author": "Konrad Bąk",
   "homepage": "https://github.com/konrad-bak/roman-numerals-converter-lib",
@@ -24,7 +24,6 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "rollup-plugin-import-css": "^3.5.0",
     "tslib": "^2.6.3"
   },
   "devDependencies": {
@@ -39,10 +38,12 @@
     "@types/react-dom": "^18.3.0",
     "jest": "^28.0.0",
     "jsdom": "^24.1.0",
+    "postcss": "^8.4.38",
     "pre-commit": "^1.2.2",
     "react-test-renderer": "^18.0.0",
     "rollup": "^4.18.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "ts-jest": "^28.0.0",
     "tsx": "^4.15.1",
     "typescript": "^4.5.5",

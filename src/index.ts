@@ -1,3 +1,4 @@
+import './styles.css';
 import toRomanNumerals, { SystemTypes } from './utils/toRomanNumerals';
 
 export type { SystemTypes };
