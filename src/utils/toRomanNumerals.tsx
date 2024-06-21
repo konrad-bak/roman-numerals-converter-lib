@@ -1,3 +1,4 @@
+import '../styles.css';
 import individualRomanCharConverter from './individualRomanCharConverter';
 
 const MAX_SMALL_NUMBER = 3999;
