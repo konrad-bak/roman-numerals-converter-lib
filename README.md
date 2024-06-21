@@ -11,10 +11,10 @@ But this library gets you covered if you wish to bring back the glorious Roman E
 
 Example:
 
-![alt text](resources/Screenshot_2-roman-numerals-converter.jpg)
+![alt text](https://github.com/konrad-bak/roman-numerals-converter-lib/blob/main/resources/Screenshot_2-roman-numerals-converter.jpg?raw=true)
 
 ChatGPT attempt:
-![alt text](resources/Screenshot_1-chatgpt-roman-wrong.jpg)
+![alt text](https://github.com/konrad-bak/roman-numerals-converter-lib/blob/main/resources/Screenshot_1-chatgpt-roman-wrong.jpg?raw=true)
 
 ## Installation
 
@@ -133,6 +133,6 @@ This topic extends in the wikipedia article, but for simplicity I've handled lar
 This system came to use in late Roman Republic and continued into Middle Ages.
 It vastly simplified handling larger numbers by putting bars, or "overlines" at the top of numbers, indicating multiplication by x1000:
 
-![alt text](resources/image.png)
+![alt text](https://github.com/konrad-bak/roman-numerals-converter-lib/blob/main/resources/image.png?raw=true)
 
 All info and descriptions come from, or are based of [Wikipedia article](https://en.wikipedia.org/wiki/Roman_numerals) and [Tuomas Salste](https://www.tuomas.salste.net/doc/roman/converter.shtml)
