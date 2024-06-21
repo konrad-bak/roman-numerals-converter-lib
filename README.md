@@ -4,6 +4,8 @@
 
 This library provides functionality to convert numbers into Roman numerals using different systems, including the standard system and the Vinculum/Apostrophus system for large numbers.
 
+**[Repository with full presentation of library](https://github.com/konrad-bak/Roman-numerals-converter)**
+
 Even ChatGPT converts wrong!
 But this library gets you covered if you wish to bring back the glorious Roman Empire Numerals!
 
@@ -19,13 +21,7 @@ ChatGPT attempt:
 To install the library, you can use npm or yarn:
 
 ```bash
- npm install roman-numerals-converter
-```
-
-or
-
-```bash
- yarn add roman-numerals-converter
+ npm i roman-numerals-converter-lib
 ```
 
 ## Usage
@@ -35,7 +31,9 @@ or
 First, import the toRomanNumerals function into your project:
 
 ```typescript
-import toRomanNumerals, { SystemTypes } from 'roman-numerals-converter';
+import toRomanNumerals from 'roman-numerals-converter-lib';
+// if using TypeScript, you can also import SystemTypes:
+import { SystemTypes } from 'roman-numerals-converter-lib/dist/types/utils/toRomanNumerals';
 ```
 
 ### Converting Numbers

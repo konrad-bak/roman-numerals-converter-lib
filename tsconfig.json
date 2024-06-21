@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "./dist/types",
-    "emitDeclarationOnly": true,
-    "outDir": "dist",
-    "target": "ES6",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "rootDir": "src",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx"
+    "declaration": true, // Generates .d.ts files for your library.
+    "declarationDir": "./dist/types", // Output directory for declaration files.
+    "emitDeclarationOnly": true, // Only emit declaration files without JavaScript output.
+    "outDir": "dist", // Directory for compiled JavaScript files.
+    "target": "ES6", // Output ES6 JavaScript.
+    "module": "ESNext", // Use ESNext modules for import/export.
+    "moduleResolution": "node", // Use Node.js module resolution.
+    "strict": true, // Enable all strict type-checking options.
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES modules.
+    "skipLibCheck": true, // Skip type checking of declaration files.
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in file names.
+    "rootDir": "src", // Specify the root directory for input files.
+    "useDefineForClassFields": true, // Use `define` keyword for class fields.
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Include standard library files.
+    "allowJs": false, // Do not allow JavaScript files.
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export.
+    "resolveJsonModule": true, // Allow importing JSON files.
+    "isolatedModules": true, // Treat each file as a separate module.
+    "jsx": "react-jsx", // Enable React JSX.
+    "typeRoots": ["./node_modules/@types", "./src/types"], // Specify where TypeScript should look for type definitions.
+    "noEmitOnError": true // Prevent emitting files if there are type errors.
   },
-  "exclude": ["node_modules", "dist", "src/utils/tests/**/*"],
-  "include": ["src/**/*"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": ["node_modules", "dist", "src/utils/tests/**/*"], // Exclude specified paths.
+  "include": ["src/**/*"], // Include all TypeScript files in src.
+  "references": [{ "path": "./tsconfig.node.json" }] // Referenced projects.
 }
