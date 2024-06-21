@@ -2,7 +2,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
-import css from 'rollup-plugin-css-only';
 import postcss from 'rollup-plugin-postcss';
 
 export default {
@@ -34,11 +33,9 @@ export default {
       rootDir: './src',
     }),
     postcss({
-      extract: true, // Extracts CSS to a separate file
-      minimize: true, // Minifies the CSS
-    }),
-    css({
-      output: 'bundle.css', // Output CSS file name
+      // Automatically inject CSS into the JavaScript bundle
+      inject: true, // Use inject to embed CSS into the JavaScript bundle
+      minimize: true, // Minimize the CSS
     }),
   ],
 };
