@@ -74,7 +74,7 @@ const processSmallNumber = (
  * @param {number} currNumber - single arabic numeral to convert (ex. 5)
  * @param {number} position - reverse position of the ```currNumber``` param in the original arabic number input (ex. 3)
  * @param {string | React.ReactElement} resultString - current state of converted roman numeral (ex. "DLV")
- * @returns {string | React.ReactElement} updated state of converted roman numeral (ex. "\<span className='top-line'\>V\</span\>DLV" from 5555)
+ * @returns {string | React.ReactElement} updated state of converted roman numeral (ex. "\<span className='romanNumerals-vinculum-top-line'\>V\</span\>DLV" from 5555)
  */
 const processLargeNumberVinculum = (
   currNumber: number,
@@ -88,7 +88,10 @@ const processLargeNumberVinculum = (
   } else {
     [singular, half, ten] = getRomanCharacters(position % 3);
   }
-  const lineClass = position >= 6 ? 'top-line-double' : 'top-line';
+  const lineClass =
+    position >= 6
+      ? 'romanNumerals-vinculum-top-line-double'
+      : 'romanNumerals-vinculum-top-line';
   const currRomanChars = individualRomanCharConverter(currNumber, singular, half, ten);
 
   return (
@@ -139,7 +142,8 @@ const toRomanNumerals = (
   input: number,
   system: SystemTypes,
 ): string | React.ReactElement => {
-  if (input > MAX_NUMBER) return <span className="red">{TOO_BIG_MESSAGE}</span>;
+  if (input > MAX_NUMBER)
+    return <span className="romanNumerals-red">{TOO_BIG_MESSAGE}</span>;
 
   const numbersArr = input.toString().split('');
   const arrLength = numbersArr.length;

@@ -1,0 +1,20 @@
+span.romanNumerals-vinculum-red {
+  color: red;
+}
+
+span.romanNumerals-vinculum-top-line {
+  text-decoration: overline;
+}
+span.romanNumerals-vinculum-top-line:not(:has(~ .romanNumerals-vinculum-top-line)) {
+  margin-right: 8px;
+}
+
+span.romanNumerals-vinculum-top-line-double {
+  border-top: 4px double;
+  line-height: 2.3;
+}
+span.romanNumerals-vinculum-top-line-double:not(
+    :has(~ .romanNumerals-vinculum-top-line-double)
+  ) {
+  margin-right: 8px;
+}

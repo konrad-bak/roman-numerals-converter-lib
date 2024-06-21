@@ -18,7 +18,8 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "src/styles.css"
   ],
   "dependencies": {
     "react": "^18.3.1",
