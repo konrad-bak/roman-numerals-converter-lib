@@ -23,7 +23,7 @@ describe('Convert to roman numerals in Vinculum System', () => {
 
     // Define expected order and classes
     const expectedElements = [
-      { text: 'VI', class: 'top-line' },
+      { text: 'VI', class: 'romanNumerals-vinculum-top-line' },
       { text: 'CCXXXIV', class: null }, // Plain text without a span
     ];
 
@@ -55,12 +55,12 @@ describe('Convert to roman numerals in Vinculum System', () => {
 
     // Define expected order and classes
     const expectedElements = [
-      { text: 'DC', class: 'top-line-double' },
-      { text: 'XX', class: 'top-line-double' },
-      { text: 'MMM', class: 'top-line-double' },
-      { text: 'CD', class: 'top-line' },
-      { text: 'XX', class: 'top-line' },
-      { text: 'IX', class: 'top-line' },
+      { text: 'DC', class: 'romanNumerals-vinculum-top-line-double' },
+      { text: 'XX', class: 'romanNumerals-vinculum-top-line-double' },
+      { text: 'MMM', class: 'romanNumerals-vinculum-top-line-double' },
+      { text: 'CD', class: 'romanNumerals-vinculum-top-line' },
+      { text: 'XX', class: 'romanNumerals-vinculum-top-line' },
+      { text: 'IX', class: 'romanNumerals-vinculum-top-line' },
       { text: 'CCCLXXXIV', class: null }, // Plain text without a span
     ];
 
