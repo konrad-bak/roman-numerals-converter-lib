@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/your-username/roman-numerals-converter-lib/issues"
   },
+  "publishConfig": {
+    "@konrad-bak:registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "vitest",
