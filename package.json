@@ -3,12 +3,19 @@
   "version": "1.0.9",
   "description": "Convert numbers into Roman numerals, for the glory of The Great Roman Empire!",
   "author": "Konrad Bąk",
-  "homepage": "https://github.com/konrad-bak/roman-numerals-converter-lib",
+  "homepage": "https://github.com/your-username/roman-numerals-converter-lib#readme",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "umd": "dist/index.umd.js",
   "types": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/roman-numerals-converter-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/roman-numerals-converter-lib/issues"
+  },
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "vitest",
