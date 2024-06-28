@@ -91,7 +91,7 @@ This project is licensed under the MIT License.
 
 ## Note
 
-For numbers up to 3999, we Romans generally used:
+For numbers up to 3999, the Romans generally used:
 | Individual decimal places |
 | ----------------------------------- |
 
