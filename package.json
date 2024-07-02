@@ -1,9 +1,9 @@
 {
-  "name": "roman-numerals-converter-lib",
+  "name": "@konrad-bak/roman-numerals-converter-lib",
   "version": "1.0.11",
   "description": "Convert numbers into Roman numerals, for the glory of The Great Roman Empire!",
   "author": "Konrad Bąk",
-  "homepage": "https://github.com/your-username/roman-numerals-converter-lib#readme",
+  "homepage": "https://github.com/konrad-bak/roman-numerals-converter-lib#readme",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,10 +11,10 @@
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/roman-numerals-converter-lib.git"
+    "url": "git+https://github.com/konrad-bak/roman-numerals-converter-lib.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/roman-numerals-converter-lib/issues"
+    "url": "https://github.com/konrad-bak/roman-numerals-converter-lib/issues"
   },
   "publishConfig": {
     "@konrad-bak:registry": "https://npm.pkg.github.com"
