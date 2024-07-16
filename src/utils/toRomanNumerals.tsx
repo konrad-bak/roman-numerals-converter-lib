@@ -74,32 +74,48 @@ const processSmallNumber = (
  * @param {number} currNumber - single arabic numeral to convert (ex. 5)
  * @param {number} position - reverse position of the ```currNumber``` param in the original arabic number input (ex. 3)
  * @param {string | React.ReactElement} resultString - current state of converted roman numeral (ex. "DLV")
+ * @param {boolean} pureString - this parameter decides between nicer HTML/CSS output or unicode overlines
  * @returns {string | React.ReactElement} updated state of converted roman numeral (ex. "\<span className='romanNumerals-vinculum-top-line'\>V\</span\>DLV" from 5555)
  */
 const processLargeNumberVinculum = (
   currNumber: number,
   position: number,
   resultString: string | React.ReactElement,
-): React.ReactElement => {
-  let singular, half, ten;
+  pureString: boolean,
+): React.ReactElement | string => {
+  let singular, half, ten, currRomanChars;
   if ((position === 6 || position === 9) && currNumber < 4) {
     singular = 'M';
     [half, ten] = getRomanCharacters(position % 3);
   } else {
     [singular, half, ten] = getRomanCharacters(position % 3);
   }
+  const overlineChar = position >= 6 ? '̿' : '̅';
+  const divider = position === 6 ? ' ' : '';
+
   const lineClass =
     position >= 6
       ? 'romanNumerals-vinculum-top-line-double'
       : 'romanNumerals-vinculum-top-line';
-  const currRomanChars = individualRomanCharConverter(currNumber, singular, half, ten);
+  currRomanChars = pureString
+    ? individualRomanCharConverter(
+        currNumber,
+        singular + overlineChar,
+        half + overlineChar,
+        ten + overlineChar,
+      )
+    : individualRomanCharConverter(currNumber, singular, half, ten);
 
-  return (
-    <>
-      <span className={lineClass}>{currRomanChars}</span>
-      {resultString}
-    </>
-  );
+  if (!pureString) {
+    return (
+      <>
+        <span className={lineClass}>{currRomanChars}</span> {resultString}
+      </>
+    );
+  } else {
+    return currRomanChars + divider + resultString;
+    // return currRomanChars + ' ' + resultString;
+  }
 };
 
 /**
@@ -129,6 +145,7 @@ const processLargeNumberApostrophus = (
  * Takes arabic numerals and converts them to roman numerals.
  * @param {number} input - arabic numeral number to convert (ex. 1234)
  * @param {SystemTypes} system - roman numerals system in which we desire a return (ex. "Vinculum")
+ * @param {boolean} pureString - this parameter decides between nicer HTML/CSS output or unicode overlines **(default: ```false```)**
  * @returns {string | React.ReactElement} roman numeral number (ex. "MCCXXXIV")
  *
  *
@@ -141,6 +158,7 @@ const processLargeNumberApostrophus = (
 const toRomanNumerals = (
   input: number,
   system: SystemTypes,
+  pureString = false,
 ): string | React.ReactElement => {
   if (input > MAX_NUMBER)
     return <span className="romanNumerals-red">{TOO_BIG_MESSAGE}</span>;
@@ -164,7 +182,12 @@ const toRomanNumerals = (
       if (i === 3) resultString = ' ' + resultString;
 
       if (system === 'Vinculum') {
-        resultString = processLargeNumberVinculum(currNumber, i, resultString);
+        resultString = processLargeNumberVinculum(
+          currNumber,
+          i,
+          resultString,
+          pureString,
+        );
       } else {
         resultString = processLargeNumberApostrophus(currNumber, i, resultString);
       }
