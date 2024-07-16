@@ -48,7 +48,20 @@ const romanNumeral = toRomanNumerals(number, system);
 console.log(romanNumeral); // Output: "MCCXXXIV"
 ```
 
-Full example:
+Full example(Vinculum):
+
+```typescript
+import toRomanNumerals from 'roman-numerals-converter';
+import { SystemTypes } from './path-to-your-app-types';
+
+const number = 6234;
+const system: SystemTypes = 'Vinculum';
+
+const romanNumeral = toRomanNumerals(number, system);
+console.log(romanNumeral); // Output: "V̅I̅ CCXXXIV"
+```
+
+Apostrophus version:
 
 ```typescript
 import toRomanNumerals from 'roman-numerals-converter';
@@ -63,12 +76,13 @@ console.log(romanNumeral); // Output: "ↇ ↀↀ"
 
 ## API
 
-**`toRomanNumerals(input: number, system: SystemTypes): string | React.ReactElement`**
+**`toRomanNumerals(input: number, system: SystemTypes, pureString = false): string | React.ReactElement`**
 
 Converts a number to a Roman numeral string or a React element.
 
 - `input`: The number to convert.
 - `system`: The numeral system to use ('Vinculum' or 'Apostrophus').
+- `pureString`_(optional)_: This parameter decides between nicer HTML/CSS output or unicode overlines **(default: `false`)**
 
 **`individualRomanCharConverter(currNumber: number, currSingularChar: string, currHalfChar: string, currTenChar: string): string`**
 
